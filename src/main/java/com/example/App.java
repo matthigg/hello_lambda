@@ -10,7 +10,7 @@ public class App
         System.out.println( "Hello World!" );
     }
 
-    public String handleRequest() {
-        return "Hello, AWS Lambda!";
+    public String handleRequest(String name) {
+        return "Hello, " + name + ", from AWS Lambda!";
     }
 }
