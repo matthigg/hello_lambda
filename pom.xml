@@ -29,6 +29,8 @@
     </dependency>
   </dependencies>
 
+  
+
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
@@ -70,6 +72,16 @@
         <plugin>
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-shade-plugin</artifactId>
+          <version>3.6.0</version>
+          <configuration>
+            <createDependencyReducedPom>false</createDependencyReducedPom>
+            <shadedArtifactAttached>true</shadedArtifactAttached>
+            <shadedClassifierName>aws</shadedClassifierName>
+          </configuration>
         </plugin>
       </plugins>
     </pluginManagement>
