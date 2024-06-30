@@ -22,8 +22,8 @@ public class AppTest
     public void shouldReturnHelloWorld()
     {
         assertEquals(
-            "Hello, AWS Lambda!", 
-            new App().handleRequest()
+            "Hello, test, from AWS Lambda!", 
+            new App().handleRequest("test")
         );
     }
 }
